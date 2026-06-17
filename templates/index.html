@@ -1,0 +1,22 @@
+<head>
+    <title>Speech Emotion Recognition</title>
+</head>
+<body>
+
+    <h1>Speech Emotion Recognition</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".wav">
+        <button type="submit">Predict Emotion</button>
+    </form>
+
+    {% if filename %}
+        <p>Uploaded: {{ filename }}</p>
+    {% endif %}
+
+    {% if prediction %}
+        <h2>Predicted Emotion: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
